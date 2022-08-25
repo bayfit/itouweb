@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Khoa Công nghệ Thông tin - Trường Đại học Mở Tp.HCM</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script type="text/javascript">var _modal_color = 'modal-white';</script>
+    <script type="text/javascript">var wwwroot = 'http://it.ou.edu.vn';</script>
+    <link rel="icon" type="image/ico" href="http://it.ou.edu.vn/asset/img/ico/favicon.ico">
+
+    <link href="http://it.ou.edu.vn/asset/css/front.css" rel="stylesheet" type="text/css">
+
+    <script type="text/javascript" src="http://it.ou.edu.vn/asset/js/plugins/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="http://it.ou.edu.vn/asset/js/plugins/jquery/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="http://it.ou.edu.vn/asset/js/plugins/jquery/jquery-migrate.min.js"></script>
+    <script type="text/javascript" src="http://it.ou.edu.vn/asset/js/plugins/jquery/globalize.js"></script>
+    <script type="text/javascript" src="http://it.ou.edu.vn/asset/js/plugins/bootstrap/bootstrap.min.js"></script>
+
+    <script type="text/javascript"
+        src="http://it.ou.edu.vn/asset/js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.0.6/jquery.mousewheel.min.js"></script>
+    <script type="text/javascript" src="http://it.ou.edu.vn/asset/js/plugins/uniform/jquery.uniform.min.js"></script>
+
+    <script type="text/javascript" src="http://it.ou.edu.vn/asset/js/plugins/knob/jquery.knob.js"></script>
+    <script type="text/javascript"
+        src="http://it.ou.edu.vn/asset/js/plugins/sparkline/jquery.sparkline.min.js"></script>
+    <script type="text/javascript" src="http://it.ou.edu.vn/asset/js/plugins/flot/jquery.flot.js"></script>
+    <script type="text/javascript" src="http://it.ou.edu.vn/asset/js/plugins/flot/jquery.flot.resize.js"></script>
+
+    <link href="http://it.ou.edu.vn/asset/js/toastr/toastr.min.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="http://it.ou.edu.vn/asset/js/toastr/toastr.min.js"></script>
+
+    <script type="text/javascript" src="http://it.ou.edu.vn/asset/js/plugins.js"></script>
+    <script type="text/javascript" src="http://it.ou.edu.vn/asset/js/actions.js"></script>
+    <script type="text/javascript" src="http://it.ou.edu.vn/asset/js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="http://it.ou.edu.vn/asset/js/jquery.base64.js"></script>
+    <script type="text/javascript" src="http://it.ou.edu.vn/asset/js/bootbox.min.js"></script>
+    <script type="text/javascript" src="http://it.ou.edu.vn/asset/js/tracker.js"></script>
+    <script type="text/javascript" src="http://it.ou.edu.vn/asset/js/cUtils.js"></script>
+    <script type="text/javascript" src="http://it.ou.edu.vn/asset/js/coremsg.js"></script>
+
+    <link href="http://it.ou.edu.vn/asset/js/totop/css/style.css" rel="stylesheet" type="text/css">
+
+    <link href="http://it.ou.edu.vn/asset/css/hover.css" rel="stylesheet" type="text/css">
+    <link href="http://it.ou.edu.vn/asset/css/frontpage.css" rel="stylesheet" type="text/css">
+
+    <link href="http://it.ou.edu.vn/asset/js/lightbox2/css/lightbox.css" rel="stylesheet">
+
+    <style type="text/css">
+        .carousel-inner>.item>img,
+        .carousel-inner>.item>a>img {
+            margin: auto;
+        }
+
+        .carousel-control.left {
+            background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, .5) 0, rgba(0, 0, 0, .0001) 100%);
+            background-image: -o-linear-gradient(left, rgba(0, 0, 0, .5) 0, rgba(0, 0, 0, .0001) 100%);
+            background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, .5)), to(rgba(0, 0, 0, .0001)));
+            background-image: linear-gradient(to right, rgba(0, 0, 0, .5) 0, rgba(0, 0, 0, .0001) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
+            background-repeat: repeat-x;
+        }
+
+        .carousel-control.right {
+            right: 0;
+            left: auto;
+            background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, .0001) 0, rgba(0, 0, 0, .5) 100%);
+            background-image: -o-linear-gradient(left, rgba(0, 0, 0, .0001) 0, rgba(0, 0, 0, .5) 100%);
+            background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, .0001)), to(rgba(0, 0, 0, .5)));
+            background-image: linear-gradient(to right, rgba(0, 0, 0, .0001) 0, rgba(0, 0, 0, .5) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
+            background-repeat: repeat-x;
+        }
+
+        .carousel-control {
+            position: absolute;
+            top: 386px;
+            bottom: 0;
+            left: inherit;
+            width: 8%;
+            font-size: 20px;
+            color: #fff;
+            text-align: center;
+            /*text-shadow: 0 1px 2px rgba(0,0,0,.6);*/
+            /*filter: alpha(opacity=50);*/
+            /*opacity: .5;*/
+        }
+
+        .carousel-control .glyphicon-chevron-left,
+        .carousel-control .glyphicon-chevron-right,
+        .carousel-control .icon-next,
+        .carousel-control .icon-prev {
+            position: absolute;
+            top: 10%;
+            bottom: 10%;
+            z-index: 5;
+            /* display: inline-block; */
+            margin-top: -10px;
+        }
+
+        .carousel-caption {
+            color: blue;
+        }
+
+        .carousel-inner {
+            margin-top: 10px;
+        }
+
+        .carousel-inner>.item>img,
+        .carousel-inner>.item>a>img {
+            height: 170px;
+        }
+
+        .style11 {
+            font-size: 80%
+        }
+
+        .fp-header .carousel img {
+            border-color: #1c5ebe;
+            border-radius: 5px;
+            border-style: solid;
+            border-width: 1px;
+            height: 85px !important;
+            width: 126px !important;
+        }
+
+        .fp-header .carousel-inner>.item>img,
+        .carousel-inner>.item>a>img {
+            display: inline-block;
+            margin: 0 1%;
+        }
+    </style>
+
+    <style type="text/css">
+        .jqstooltip {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            visibility: hidden;
+            background: rgb(0, 0, 0) transparent;
+            background-color: rgba(0, 0, 0, 0.6);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+            -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+            color: white;
+            font: 10px arial, san serif;
+            text-align: left;
+            white-space: nowrap;
+            padding: 5px;
+            border: 1px solid white;
+            z-index: 10000;
+        }
+
+        .jqsfield {
+            color: white;
+            font: 10px arial, san serif;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hop-tac-quoc-te">
+
+        
+        <div class="text-center">
+            <img style="max-width: 200px" src="http://it.ou.edu.vn/asset/ckfinder/userfiles/5/images/Logo_Suan_Color.jpg" width="100%" alt="Logo Suan Sunandha Rajabhat University">
+        </div>
+        <hr/>
+        <h3 class="text-center"><a href="https://ssru.ac.th/en">Suan Sunandha Rajabhat University</a></h3>
+        
+        
+    </div>
+</body>
+
+</html>

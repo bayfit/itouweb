@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Khoa Công nghệ Thông tin - Trường Đại học Mở Tp.HCM</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script type="text/javascript">var _modal_color = 'modal-white';</script>
+    <script type="text/javascript">var wwwroot = 'http://it.ou.edu.vn';</script>
+    <link rel="icon" type="image/ico" href="http://it.ou.edu.vn/asset/img/ico/favicon.ico">
+
+    <link href="http://it.ou.edu.vn/asset/css/front.css" rel="stylesheet" type="text/css">
+
+    <script type="text/javascript" src="http://it.ou.edu.vn/asset/js/plugins/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="http://it.ou.edu.vn/asset/js/plugins/jquery/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="http://it.ou.edu.vn/asset/js/plugins/jquery/jquery-migrate.min.js"></script>
+    <script type="text/javascript" src="http://it.ou.edu.vn/asset/js/plugins/jquery/globalize.js"></script>
+    <script type="text/javascript" src="http://it.ou.edu.vn/asset/js/plugins/bootstrap/bootstrap.min.js"></script>
+
+    <script type="text/javascript"
+        src="http://it.ou.edu.vn/asset/js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.0.6/jquery.mousewheel.min.js"></script>
+    <script type="text/javascript" src="http://it.ou.edu.vn/asset/js/plugins/uniform/jquery.uniform.min.js"></script>
+
+    <script type="text/javascript" src="http://it.ou.edu.vn/asset/js/plugins/knob/jquery.knob.js"></script>
+    <script type="text/javascript"
+        src="http://it.ou.edu.vn/asset/js/plugins/sparkline/jquery.sparkline.min.js"></script>
+    <script type="text/javascript" src="http://it.ou.edu.vn/asset/js/plugins/flot/jquery.flot.js"></script>
+    <script type="text/javascript" src="http://it.ou.edu.vn/asset/js/plugins/flot/jquery.flot.resize.js"></script>
+
+    <link href="http://it.ou.edu.vn/asset/js/toastr/toastr.min.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="http://it.ou.edu.vn/asset/js/toastr/toastr.min.js"></script>
+
+    <script type="text/javascript" src="http://it.ou.edu.vn/asset/js/plugins.js"></script>
+    <script type="text/javascript" src="http://it.ou.edu.vn/asset/js/actions.js"></script>
+    <script type="text/javascript" src="http://it.ou.edu.vn/asset/js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="http://it.ou.edu.vn/asset/js/jquery.base64.js"></script>
+    <script type="text/javascript" src="http://it.ou.edu.vn/asset/js/bootbox.min.js"></script>
+    <script type="text/javascript" src="http://it.ou.edu.vn/asset/js/tracker.js"></script>
+    <script type="text/javascript" src="http://it.ou.edu.vn/asset/js/cUtils.js"></script>
+    <script type="text/javascript" src="http://it.ou.edu.vn/asset/js/coremsg.js"></script>
+
+    <link href="http://it.ou.edu.vn/asset/js/totop/css/style.css" rel="stylesheet" type="text/css">
+
+    <link href="http://it.ou.edu.vn/asset/css/hover.css" rel="stylesheet" type="text/css">
+    <link href="http://it.ou.edu.vn/asset/css/frontpage.css" rel="stylesheet" type="text/css">
+
+    <link href="http://it.ou.edu.vn/asset/js/lightbox2/css/lightbox.css" rel="stylesheet">
+
+    <style type="text/css">
+        .carousel-inner>.item>img,
+        .carousel-inner>.item>a>img {
+            margin: auto;
+        }
+
+        .carousel-control.left {
+            background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, .5) 0, rgba(0, 0, 0, .0001) 100%);
+            background-image: -o-linear-gradient(left, rgba(0, 0, 0, .5) 0, rgba(0, 0, 0, .0001) 100%);
+            background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, .5)), to(rgba(0, 0, 0, .0001)));
+            background-image: linear-gradient(to right, rgba(0, 0, 0, .5) 0, rgba(0, 0, 0, .0001) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
+            background-repeat: repeat-x;
+        }
+
+        .carousel-control.right {
+            right: 0;
+            left: auto;
+            background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, .0001) 0, rgba(0, 0, 0, .5) 100%);
+            background-image: -o-linear-gradient(left, rgba(0, 0, 0, .0001) 0, rgba(0, 0, 0, .5) 100%);
+            background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, .0001)), to(rgba(0, 0, 0, .5)));
+            background-image: linear-gradient(to right, rgba(0, 0, 0, .0001) 0, rgba(0, 0, 0, .5) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
+            background-repeat: repeat-x;
+        }
+
+        .carousel-control {
+            position: absolute;
+            top: 386px;
+            bottom: 0;
+            left: inherit;
+            width: 8%;
+            font-size: 20px;
+            color: #fff;
+            text-align: center;
+            /*text-shadow: 0 1px 2px rgba(0,0,0,.6);*/
+            /*filter: alpha(opacity=50);*/
+            /*opacity: .5;*/
+        }
+
+        .carousel-control .glyphicon-chevron-left,
+        .carousel-control .glyphicon-chevron-right,
+        .carousel-control .icon-next,
+        .carousel-control .icon-prev {
+            position: absolute;
+            top: 10%;
+            bottom: 10%;
+            z-index: 5;
+            /* display: inline-block; */
+            margin-top: -10px;
+        }
+
+        .carousel-caption {
+            color: blue;
+        }
+
+        .carousel-inner {
+            margin-top: 10px;
+        }
+
+        .carousel-inner>.item>img,
+        .carousel-inner>.item>a>img {
+            height: 170px;
+        }
+
+        .style11 {
+            font-size: 80%
+        }
+
+        .fp-header .carousel img {
+            border-color: #1c5ebe;
+            border-radius: 5px;
+            border-style: solid;
+            border-width: 1px;
+            height: 85px !important;
+            width: 126px !important;
+        }
+
+        .fp-header .carousel-inner>.item>img,
+        .carousel-inner>.item>a>img {
+            display: inline-block;
+            margin: 0 1%;
+        }
+    </style>
+
+    <style type="text/css">
+        .jqstooltip {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            visibility: hidden;
+            background: rgb(0, 0, 0) transparent;
+            background-color: rgba(0, 0, 0, 0.6);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+            -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+            color: white;
+            font: 10px arial, san serif;
+            text-align: left;
+            white-space: nowrap;
+            padding: 5px;
+            border: 1px solid white;
+            z-index: 10000;
+        }
+
+        .jqsfield {
+            color: white;
+            font: 10px arial, san serif;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bai-bao">
+        <style>
+            .card {
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                margin: 5px;
+                padding: 0px 5px 5px 10px;
+                box-shadow: 0px 1px 2px #2b5a7466;
+                background: #f5fafd;
+                transition: all 0.1s ease;
+            }
+
+            .card:hover {
+                box-shadow: 0px 1px 5px #2b5a7466;
+                transform: scale(1.005);
+                background: #fff;
+            }
+
+            .card .card-title {
+                font-weight: bold;
+            }
+
+            .text-in-line {
+                overflow: hidden;
+                text-align: center;
+                font-size: 20px;
+                font-weight: bold;
+                text-transform: uppercase;
+                margin-top: 20px;
+            }
+
+            .text-in-line:before,
+            .text-in-line:after {
+                content: "";
+                display: inline-block;
+                height: 1px;
+                position: relative;
+                vertical-align: middle;
+                width: 50%;
+            }
+
+            .text-in-line:before {
+                background-image: linear-gradient(to left, #fff, #2b5a74);
+                right: 0.5em;
+                margin-left: -20%;
+            }
+
+            .text-in-line:after {
+                background-image: linear-gradient(to right, #fff, #2b5a74);
+                left: 0.5em;
+                margin-right: -20%;
+            }
+
+            .text-in-line .border {
+                box-shadow: 0px 0px 5px #2b5a74;
+                padding: 20px;
+                color: #fff;
+                background: #2b5a74;
+                line-height: 30px;
+            }
+        </style>
+        <!-- BEGIN OF PUBLICATIONS LIST -->
+        <div class="text-in-line"><span class="border">NĂM 2021</span></div>
+        <div class="card m-2">
+            <div class="card-body">
+                <h5 class="card-title"><a href="https://doi.org/10.1109/DASA53625.2021.9682306" class="card-link">Human
+                        ear-side detection based on YOLOv5 detector and deep neural networks</a></h5>
+                <div class="card-text"> <strong>Tạp chí</strong>: 2021 International Conference on Decision Aid Sciences
+                    and Application (DASA) </div>
+                <div class="card-text"> <strong>Tác giả</strong>: <b>Huy Nguyen Quoc</b>; Vinh Truong Hoang </div>
+                <div class="card-text"> <strong>DOI</strong>: <a href="https://doi.org/10.1109/DASA53625.2021.9682306"
+                        class="card-link">https://doi.org/10.1109/DASA53625.2021.9682306</a> </div>
+                <div class="card-text"> <strong>Năm</strong>: 2021 </div>
+            </div>
+        </div>
+        <div class="card m-2">
+            <div class="card-body">
+                <h5 class="card-title"><a href="https://doi.org/10.1007/978-3-030-92942-8_7" class="card-link">An
+                        Approach for Multiple Choice Question Answering System</a></h5>
+                <div class="card-text"> <strong>Tạp chí</strong>: International Conference on Nature of Computation and
+                    Communication ICTCC 2021: Nature of Computation and Communication pp 76–82 </div>
+                <div class="card-text"> <strong>Tác giả</strong>: <b>Dinh-Huy Vo</b>, <b>Anh-Khoa Do-Vo</b>, Tram-Anh
+                    Nguyen-Thi, Huu-Thanh Duong </div>
+                <div class="card-text"> <strong>DOI</strong>: <a href="https://doi.org/10.1007/978-3-030-92942-8_7"
+                        class="card-link">https://doi.org/10.1007/978-3-030-92942-8_7</a> </div>
+                <div class="card-text"> <strong>Năm</strong>: 2021 </div>
+            </div>
+        </div>
+        <div class="card m-2">
+            <div class="card-body">
+                <h5 class="card-title"><a href="https://doi.org/10.1007/978-981-16-2008-9_1" class="card-link">CNN
+                        Parameter Adjustment for Brain Tumor Classification</a></h5>
+                <div class="card-text"> <strong>Tạp chí</strong>: Advances in Intelligent Systems and Computing:
+                    Applied Information Processing Systems pp 1–10 </div>
+                <div class="card-text"> <strong>Tác giả</strong>: <b>Toan Pham Ho</b> & Vinh Truong Hoang </div>
+                <div class="card-text"> <strong>DOI</strong>: <a href="https://doi.org/10.1007/978-981-16-2008-9_1"
+                        class="card-link">https://doi.org/10.1007/978-981-16-2008-9_1</a> </div>
+                <div class="card-text"> <strong>Năm</strong>: 2021 </div>
+            </div>
+        </div>
+        <div class="card m-2">
+            <div class="card-body">
+                <h5 class="card-title"><a href="https://doi.org/10.1109/ZINC52049.2021.9499250"
+                        class="card-link">Unsupervised gender prediction based on deep facial features</a></h5>
+                <div class="card-text"> <strong>Tạp chí</strong>: 2021 Zooming Innovation in Consumer Technologies
+                    Conference (ZINC) </div>
+                <div class="card-text"> <strong>Tác giả</strong>: <b>Mai Tuong Vi</b>; <b>Le Thanh Dat</b>; Vinh Truong
+                    Hoang; Tram-Anh Nguyen-Thi </div>
+                <div class="card-text"> <strong>DOI</strong>: <a href="https://doi.org/10.1109/ZINC52049.2021.9499250"
+                        class="card-link">https://doi.org/10.1109/ZINC52049.2021.9499250</a> </div>
+                <div class="card-text"> <strong>Năm</strong>: 2021 </div>
+            </div>
+        </div>
+        <div class="card m-2">
+            <div class="card-body">
+                <h5 class="card-title"><a href="https://doi.org/10.1155/2021/6296505" class="card-link">A Revisit
+                        Histogram of Oriented Descriptor for Facial Color Image Classification Based on Fusion of Color
+                        Information</a></h5>
+                <div class="card-text"> <strong>Tạp chí</strong>: Journal of Sensors </div>
+                <div class="card-text"> <strong>Tác giả</strong>: <b>Huy Nguyen-Quoc</b>; Vinh Truong Hoang </div>
+                <div class="card-text"> <strong>DOI</strong>: <a href="https://doi.org/10.1155/2021/6296505"
+                        class="card-link">https://doi.org/10.1155/2021/6296505</a> </div>
+                <div class="card-text"> <strong>Năm</strong>: 2021 </div>
+            </div>
+        </div>
+        <div class="card m-2">
+            <div class="card-body">
+                <h5 class="card-title"><a href="https://doi.org/10.1155/2021/7918165" class="card-link">Real-Time Human
+                        Ear Detection Based on the Joint of Yolo and RetinaFace</a></h5>
+                <div class="card-text"> <strong>Tạp chí</strong>: International Conference on the Development of
+                    Biomedical Engineering in Vietnam BME 2020: 8th International Conference on the Development of
+                    Biomedical Engineering in Vietnam pp 717–732 </div>
+                <div class="card-text"> <strong>Tác giả</strong>: <b>Huy Nguyen-Quoc</b>; Vinh Truong Hoang </div>
+                <div class="card-text"> <strong>DOI</strong>: <a href="https://doi.org/10.1155/2021/7918165"
+                        class="card-link">https://doi.org/10.1155/2021/7918165</a> </div>
+                <div class="card-text"> <strong>Năm</strong>: 2021 </div>
+            </div>
+        </div>
+        <div class="card m-2">
+            <div class="card-body">
+                <h5 class="card-title"><a href="https://doi.org/10.1007/978-3-030-75506-5_58" class="card-link">Object
+                        contour in medical images based on saliency map combined with active contour model</a></h5>
+                <div class="card-text"> <strong>Tạp chí</strong>: Proceedings of the 8th International Conference on the
+                    Development of Biomedical Engineering, Springer </div>
+                <div class="card-text"> <strong>Tác giả</strong>: <b>Vo Hoang Thien</b>, Vo Thi Hong Tuyet, Nguyen Thanh
+                    Binh </div>
+                <div class="card-text"> <strong>DOI</strong>: <a href="https://doi.org/10.1007/978-3-030-75506-5_58"
+                        class="card-link">https://doi.org/10.1007/978-3-030-75506-5_58</a> </div>
+                <div class="card-text"> <strong>Năm</strong>: 2021 </div>
+            </div>
+        </div>
+        <div class="card m-2">
+            <div class="card-body">
+                <h5 class="card-title"><a href="https://doi.org/10.1007/978-981-15-7527-3_61" class="card-link">Using
+                        Feature Selection Based on Multi-view for Rice Seed Images Classification</a></h5>
+                <div class="card-text"> <strong>Tạp chí</strong>: Research in Intelligent and Computing in Engineering
+                    pp 651–661 </div>
+                <div class="card-text"> <strong>Tác giả</strong>: <b>D. Lam Tran Tuan</b>, V. Truong Hoang </div>
+                <div class="card-text"> <strong>DOI</strong>: <a href="https://doi.org/10.1007/978-981-15-7527-3_61"
+                        class="card-link">https://doi.org/10.1007/978-981-15-7527-3_61</a> </div>
+                <div class="card-text"> <strong>Năm</strong>: 2021 </div>
+            </div>
+        </div>
+        <div class="text-in-line"><span class="border">NĂM 2020</span></div>
+        <div class="card m-2">
+            <div class="card-body">
+                <h5 class="card-title"><a href="https://doi.org/10.1007/978-3-030-49264-9_37"
+                        class="card-link">VNPlant-200 – a public and large-scale of Vietnamese medicinal plant images
+                        dataset</a></h5>
+                <div class="card-text"> <strong>Tạp chí</strong>: International Conference on Integrated Science ICIS
+                    2020: Integrated Science in Digital Age 2020 pp 406–411 </div>
+                <div class="card-text"> <strong>Tác giả</strong>: <b>T. Nguyen Quoc</b>, V. Truong Hoang </div>
+                <div class="card-text"> <strong>DOI</strong>: <a href="https://doi.org/10.1007/978-3-030-49264-9_37"
+                        class="card-link">https://doi.org/10.1007/978-3-030-49264-9_37</a> </div>
+                <div class="card-text"> <strong>Năm</strong>: 2020 </div>
+            </div>
+        </div>
+        <div class="card m-2">
+            <div class="card-body">
+                <h5 class="card-title"><a href="https://doi.org/10.1007/978-3-030-49264-9_34" class="card-link">A
+                        comparative study of color spaces for cloud images recognition based on data fusion</a></h5>
+                <div class="card-text"> <strong>Tạp chí</strong>: International Conference on Integrated Science ICIS
+                    2020: Integrated Science in Digital Age 2020 pp 375–382 </div>
+                <div class="card-text"> <strong>Tác giả</strong>: <b>H. Duong Thi Hong</b>, V. Truong Hoang </div>
+                <div class="card-text"> <strong>DOI</strong>: <a href="https://doi.org/10.1007/978-3-030-49264-9_34"
+                        class="card-link">https://doi.org/10.1007/978-3-030-49264-9_34</a> </div>
+                <div class="card-text"> <strong>Năm</strong>: 2020 </div>
+            </div>
+        </div>
+        <div class="text-in-line"><span class="border">NĂM 2019</span></div>
+        <div class="card m-2">
+            <div class="card-body">
+                <h5 class="card-title"><a href="https://doi.org/10.1109/APCC47188.2019.9026554" class="card-link">Early
+                        and late features fusion for kinship verification based on constraint selection</a></h5>
+                <div class="card-text"> <strong>Tạp chí</strong>: 2019 25th Asia-Pacific Conference on Communications
+                    (APCC) </div>
+                <div class="card-text"> <strong>Tác giả</strong>: <b>Tien Nguyen Van</b>; Vinh Truong Hoang </div>
+                <div class="card-text"> <strong>DOI</strong>: <a href="https://doi.org/10.1109/APCC47188.2019.9026554"
+                        class="card-link">https://doi.org/10.1109/APCC47188.2019.9026554</a> </div>
+                <div class="card-text"> <strong>Năm</strong>: 2019 </div>
+            </div>
+        </div>
+        <div class="card m-2">
+            <div class="card-body">
+                <h5 class="card-title"><a href="https://doi.org/10.1007/978-3-030-38364-0_23" class="card-link">Fusing
+                        of Deep Learning, Transfer Learning and GAN for Breast Cancer Histopathological Image
+                        Classification</a></h5>
+                <div class="card-text"> <strong>Tạp chí</strong>: International Conference on Computer Science, Applied
+                    Mathematics and Applications ICCSAMA 2019: Advanced Computational Methods for Knowledge Engineering
+                    pp 255–266 </div>
+                <div class="card-text"> <strong>Tác giả</strong>: <b>Mai Bui Huynh Thuy</b> & Vinh Truong Hoang </div>
+                <div class="card-text"> <strong>DOI</strong>: <a href="https://doi.org/10.1007/978-3-030-38364-0_23"
+                        class="card-link">https://doi.org/10.1007/978-3-030-38364-0_23</a> </div>
+                <div class="card-text"> <strong>Năm</strong>: 2019 </div>
+            </div>
+        </div>
+        <div class="card m-2">
+            <div class="card-body">
+                <h5 class="card-title"><a href="https://doi.org/10.1007/978-3-030-34980-6_21"
+                        class="card-link">One-Document Training for Vietnamese Sentiment Analysis</a></h5>
+                <div class="card-text"> <strong>Tạp chí</strong>: International Conference on Computational Data and
+                    Social Networks CSoNet 2019: Computational Data and Social Networks pp 189–200 </div>
+                <div class="card-text"> <strong>Tác giả</strong>: <b>D.-K. Nguyen-Nhat</b> and H.-T. Duong </div>
+                <div class="card-text"> <strong>DOI</strong>: <a href="https://doi.org/10.1007/978-3-030-34980-6_21"
+                        class="card-link">https://doi.org/10.1007/978-3-030-34980-6_21</a> </div>
+                <div class="card-text"> <strong>Năm</strong>: 2019 </div>
+            </div>
+        </div>
+        <div class="card m-2">
+            <div class="card-body">
+                <h5 class="card-title"><a href="http://doi.org/10.12928/telkomnika.v18i4.14069" class="card-link">Rice
+                        seed image classification based on HOG descriptor with missing values imputation</a></h5>
+                <div class="card-text"> <strong>Tạp chí</strong>: TELKOMNIKA Telecommunication, Computing, Electronics
+                    and Control </div>
+                <div class="card-text"> <strong>Tác giả</strong>: <b>H. Nguyen Quoc</b>, V. Truong Hoang </div>
+                <div class="card-text"> <strong>DOI</strong>: <a href="http://doi.org/10.12928/telkomnika.v18i4.14069"
+                        class="card-link">http://doi.org/10.12928/telkomnika.v18i4.14069</a> </div>
+                <div class="card-text"> <strong>Năm</strong>: 2019 </div>
+            </div>
+        </div>
+        <div class="card m-2">
+            <div class="card-body">
+                <h5 class="card-title"><a href="https://doi.org/10.1109/ICT.2019.8798781" class="card-link">Kinship
+                        Verification based on Local Binary Pattern features coding in different color space</a></h5>
+                <div class="card-text"> <strong>Tạp chí</strong>: 2019 26th International Conference on
+                    Telecommunications (ICT) </div>
+                <div class="card-text"> <strong>Tác giả</strong>: <b>T. Nguyen Van</b>, V. Truong Hoang </div>
+                <div class="card-text"> <strong>DOI</strong>: <a href="https://doi.org/10.1109/ICT.2019.8798781"
+                        class="card-link">https://doi.org/10.1109/ICT.2019.8798781</a> </div>
+                <div class="card-text"> <strong>Năm</strong>: 2019 </div>
+            </div>
+        </div>
+        <div class="card m-2">
+            <div class="card-body">
+                <h5 class="card-title"><a href="https://doi.org/10.1109/ICT.2019.8798816" class="card-link">Feature
+                        fusion by using LBP, HOG, GIST descriptors and Canonical Correlation Analysis for face
+                        recognition</a></h5>
+                <div class="card-text"> <strong>Tạp chí</strong>: 2019 26th International Conference on
+                    Telecommunications (ICT) </div>
+                <div class="card-text"> <strong>Tác giả</strong>: <b>H. Ta Minh Nhat</b>, V. Truong Hoang </div>
+                <div class="card-text"> <strong>DOI</strong>: <a href="https://doi.org/10.1109/ICT.2019.8798816"
+                        class="card-link">https://doi.org/10.1109/ICT.2019.8798816</a> </div>
+                <div class="card-text"> <strong>Năm</strong>: 2019 </div>
+            </div>
+        </div>
+        <div class="card m-2">
+            <div class="card-body">
+                <h5 class="card-title"><a href="https://doi.org/10.1109/MAPR.2019.8743528" class="card-link">Feeding
+                        Convolutional Neural Network by hand-crafted features based on Enhanced Neighbor-Center
+                        Different Image for color texture classification</a></h5>
+                <div class="card-text"> <strong>Tạp chí</strong>: 2019 International Conference on Multimedia Analysis
+                    and Pattern Recognition (MAPR) </div>
+                <div class="card-text"> <strong>Tác giả</strong>: <b>D. Phan Van Hoai</b>, V. Truong Hoang </div>
+                <div class="card-text"> <strong>DOI</strong>: <a href="https://doi.org/10.1109/MAPR.2019.8743528"
+                        class="card-link">https://doi.org/10.1109/MAPR.2019.8743528</a> </div>
+                <div class="card-text"> <strong>Năm</strong>: 2019 </div>
+            </div>
+        </div>
+        <div class="card m-2">
+            <div class="card-body">
+                <h5 class="card-title"><a href="https://doi.org/10.1007/978-3-030-30149-1_19"
+                        class="card-link">LBP-based edge information for color texture classification</a></h5>
+                <div class="card-text"> <strong>Tạp chí</strong>: 5th EAI International Conference on Industrial
+                    Networks and Intelligent Systems (Springer-INISCOM'19) </div>
+                <div class="card-text"> <strong>Tác giả</strong>: <b>D. Phan Van Hoai</b>, V. Truong Hoang </div>
+                <div class="card-text"> <strong>DOI</strong>: <a href="https://doi.org/10.1007/978-3-030-30149-1_19"
+                        class="card-link">https://doi.org/10.1007/978-3-030-30149-1_19</a> </div>
+                <div class="card-text"> <strong>Năm</strong>: 2019 </div>
+            </div>
+        </div>
+        <div class="card m-2">
+            <div class="card-body">
+                <h5 class="card-title"><a href="http://doi.org/10.1007/978-3-030-30149-1_20" class="card-link">A
+                        Vietnamese sentiment analysis system based on multiple classifiers with enhancing lexicon
+                        features</a></h5>
+                <div class="card-text"> <strong>Tạp chí</strong>: 5th EAI International Conference on Industrial
+                    Networks and Intelligent Systems (Springer-INISCOM'19) </div>
+                <div class="card-text"> <strong>Tác giả</strong>: <b>T. Nguyen Thi Bich</b>, T. Duong Huu </div>
+                <div class="card-text"> <strong>DOI</strong>: <a href="http://doi.org/10.1007/978-3-030-30149-1_20"
+                        class="card-link">http://doi.org/10.1007/978-3-030-30149-1_20</a> </div>
+                <div class="card-text"> <strong>Năm</strong>: 2019 </div>
+            </div>
+        </div>
+
+
+        <!-- END OF PUBLICATIONS LIST -->
+    </div>
+</body>
+
+</html>
